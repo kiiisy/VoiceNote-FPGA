@@ -2,73 +2,109 @@ module wr_ctrl #(
     parameter integer DEPTH = 2048,
     parameter integer WIDTH = 36
 ) (
-    input  wire clk,
-    input  wire reset,
+    input  wire                     clk,
+    input  wire                     reset,
 
-    input  wire en,
+    // from core_ctrl
+    input  wire                     en,
 
-    input  wire [WIDTH-1:0] in_packed,
-    input  wire             in_valid,
-    output wire             in_ready,
+    // from stream2data
+    input  wire [WIDTH-1:0]         in_packed,
+    input  wire                     in_valid,
+    output wire                     in_ready,
 
-    output reg              bram_we,
-    output reg  [$clog2(DEPTH)-1:0] bram_waddr,
-    output reg  [WIDTH-1:0] bram_wdata,
+    // to bram
+    output wire                     bram_we,
+    output wire [$clog2(DEPTH)-1:0] bram_waddr,
+    output wire [WIDTH-1:0]         bram_wdata,
 
-    output reg  [$clog2(DEPTH)-1:0] wr_ptr
+    output wire [$clog2(DEPTH)-1:0] wr_ptr
 );
+    // -------------------------------
+    // パラメータ
+    // -------------------------------
+    localparam integer ADDR_W = $clog2(DEPTH);
 
-    localparam S_IDLE  = 1'b0;
-    localparam S_WRITE = 1'b1;
+    // -------------------------------
+    // 内部信号
+    // -------------------------------
+    reg [ADDR_W-1:0] r_waddr;
+    reg [WIDTH-1:0]  r_wdata;
+    reg [ADDR_W-1:0] r_wr_ptr;
+    reg              r_bram_we;
 
-    reg r_state, r_next_state;
+    wire w_accept;
 
-    assign in_ready = (r_state == S_IDLE) && en;
+    // en有効中は常時受信可能
+    assign in_ready = en;
+    assign w_accept = en && in_valid;
 
-    // state reg
+    // -------------------------------
+    // BRAM書き込みイネーブル
+    // -------------------------------
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            r_state <= S_IDLE;
+            r_bram_we <= 1'b0;
         end else begin
-            r_state <= r_next_state;
+            r_bram_we <= w_accept;
         end
     end
 
-    // next state
-    always @(*) begin
-        r_next_state = r_state;
+    assign bram_we = r_bram_we;
 
-        case (r_state)
-        S_IDLE: begin
-            if (en && in_valid) begin
-                r_next_state = S_WRITE;
-            end
-        end
-        S_WRITE: begin
-            r_next_state = S_IDLE;
-        end
-        endcase
-    end
-
-    // outputs / datapath
+    // -------------------------------
+    // BRAM書き込みアドレス
+    // -------------------------------
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            bram_we    <= 1'b0;
-            bram_waddr <= 0;
-            bram_wdata <= 0;
-            wr_ptr     <= 0;
+            r_waddr <= {ADDR_W{1'b0}};
         end else begin
-            bram_we <= 1'b0;
-
-            if (r_state == S_IDLE && r_next_state == S_WRITE) begin
-                bram_we    <= 1'b1;
-                bram_waddr <= wr_ptr;
-                bram_wdata <= in_packed;
-
-                // ring increment
-                wr_ptr <= (wr_ptr == DEPTH-1) ? 0 : wr_ptr + 1'b1;
+            if (w_accept) begin
+                r_waddr <= r_wr_ptr;
+            end else begin
+                r_waddr <= r_waddr;
             end
         end
     end
+
+    assign bram_waddr = r_waddr;
+
+    // -------------------------------
+    // BRAM書き込みデータ
+    // -------------------------------
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            r_wdata <= {WIDTH{1'b0}};
+        end else begin
+            if (w_accept) begin
+                r_wdata <= in_packed;
+            end else begin
+                r_wdata <= r_wdata;
+            end
+        end
+    end
+
+    assign bram_wdata = r_wdata;
+
+    // -------------------------------
+    // 書き込みポインタ
+    // -------------------------------
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            r_wr_ptr <= {ADDR_W{1'b0}};
+        end else begin
+            if (w_accept) begin
+                if (r_wr_ptr == DEPTH-1) begin
+                    r_wr_ptr <= {ADDR_W{1'b0}};
+                end else begin
+                    r_wr_ptr <= r_wr_ptr + 1'b1;
+                end
+            end else begin
+                r_wr_ptr <= r_wr_ptr;
+            end
+        end
+    end
+
+    assign wr_ptr = r_wr_ptr;
 
 endmodule
