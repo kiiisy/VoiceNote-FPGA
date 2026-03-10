@@ -3,7 +3,7 @@
 import csv_pkg::*;
 
 module i2s_input_dpi #(
-    string CSV_PATH = "../../../../verification/AudioCleanUp/input/audio_clean_up_case1_input.csv"
+    string CSV_PATH = "../../../../verification/recording/arec/input/scenario_001_input.csv"
 ) (
     input  logic sclk,      // I2S RX の sclk_out
     input  logic lrclk,     // I2S RX の lrclk_out (0: L, 1: R 想定)
@@ -17,11 +17,15 @@ logic [15:0] shift_reg;
 logic [4:0]  bit_idx;
 logic        lrclk_d;
 int          valid;
+string       r_csv_path;
 
 // 初期化時に CSV を開く
 initial begin
-  $display("start i2s_input_dpi, path=%s", CSV_PATH);
-  csv_init(CSV_PATH);
+  if (!$value$plusargs("INPUT_CSV=%s", r_csv_path)) begin
+    r_csv_path = CSV_PATH;
+  end
+  $display("start i2s_input_dpi, path=%s", r_csv_path);
+  csv_init(r_csv_path);
 end
 
   // LRCLK エッジで新しいサンプルを獲得
