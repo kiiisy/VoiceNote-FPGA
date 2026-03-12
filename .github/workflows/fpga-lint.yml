@@ -1,0 +1,40 @@
+name: FPGA Lint
+
+on:
+  pull_request:
+    paths:
+      - "src/myip/xxx/hdl/**/*.v"
+      - "src/myip/xxx/hdl/**/*.sv"
+      - "src/myip/xxx/hdl/**/*.vh"
+      - "src/myip/xxx/hdl/**/*.svh"
+      - ".config/fpga/**"
+      - ".github/workflows/fpga-lint.yml"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup OSS CAD Suite
+        uses: YosysHQ/setup-oss-cad-suite@v3
+
+      - name: Show tool versions
+        run: |
+          verilator --version
+          verible-verilog-lint --version
+
+      - name: Verilator lint
+        run: |
+          verilator --lint-only -Wall -f .config/fpga/verilator.f
+
+      - name: Verible lint
+        run: |
+          files=$(find src/myip/xxx/hdl -type f \( -name "*.v" -o -name "*.sv" -o -name "*.vh" -o -name "*.svh" \))
+          if [ -n "$files" ]; then
+            verible-verilog-lint --rules_config=.config/fpga/verible.rules $files
+          else
+            echo "No Verilog/SystemVerilog files found."
+          fi
