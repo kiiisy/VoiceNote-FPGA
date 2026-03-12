@@ -3,10 +3,10 @@ name: FPGA Lint
 on:
   pull_request:
     paths:
-      - "src/myip/xxx/hdl/**/*.v"
-      - "src/myip/xxx/hdl/**/*.sv"
-      - "src/myip/xxx/hdl/**/*.vh"
-      - "src/myip/xxx/hdl/**/*.svh"
+      - "src/myip/arec_1_0/hdl/**/*.v"
+      - "src/myip/arec_1_0/hdl/**/*.sv"
+      - "src/myip/arec_1_0/hdl/**/*.vh"
+      - "src/myip/arec_1_0/hdl/**/*.svh"
       - ".config/fpga/**"
       - ".github/workflows/fpga-lint.yml"
 

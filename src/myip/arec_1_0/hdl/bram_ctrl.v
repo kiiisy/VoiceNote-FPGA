@@ -53,7 +53,7 @@ module bram_ctrl #(
     wire [WEA_W-1:0]    w_wea;
 
     // わざと
-    assign y = b;
+    assign y = a;
 
     assign w_wea = {WEA_W{w_bram_we}};
 
