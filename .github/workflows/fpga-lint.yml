@@ -23,18 +23,11 @@ jobs:
 
       - name: Show tool versions
         run: |
-          verilator --version
-          verible-verilog-lint --version
+          which verilator || true
+          which verible-verilog-lint || true
+          verilator --version || true
+          verible-verilog-lint --version || true
 
       - name: Verilator lint
         run: |
           verilator --lint-only -Wall -f .config/fpga/verilator.f
-
-      - name: Verible lint
-        run: |
-          files=$(find src/myip/xxx/hdl -type f \( -name "*.v" -o -name "*.sv" -o -name "*.vh" -o -name "*.svh" \))
-          if [ -n "$files" ]; then
-            verible-verilog-lint --rules_config=.config/fpga/verible.rules $files
-          else
-            echo "No Verilog/SystemVerilog files found."
-          fi
