@@ -52,9 +52,6 @@ module bram_ctrl #(
     wire [ADDR_W:0]     w_dump_len;
     wire [WEA_W-1:0]    w_wea;
 
-    // わざと
-    assign y = a;
-
     assign w_wea = {WEA_W{w_bram_we}};
 
     // -------------------------------
