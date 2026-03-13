@@ -26,6 +26,8 @@ jobs:
 
       - name: Setup OSS CAD Suite
         uses: YosysHQ/setup-oss-cad-suite@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup reviewdog
         uses: reviewdog/action-setup@v1
