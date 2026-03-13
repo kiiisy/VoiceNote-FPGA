@@ -3,38 +3,111 @@ name: FPGA Lint
 on:
   pull_request:
     paths:
-      - "src/myip/xxx/hdl/**/*.v"
-      - "src/myip/xxx/hdl/**/*.sv"
-      - "src/myip/xxx/hdl/**/*.vh"
-      - "src/myip/xxx/hdl/**/*.svh"
+      - "src/myip/arec_1_0/hdl/**/*.v"
+      - "src/myip/arec_1_0/hdl/**/*.sv"
+      - "src/myip/arec_1_0/hdl/**/*.vh"
+      - "src/myip/arec_1_0/hdl/**/*.svh"
       - ".config/fpga/**"
       - ".github/workflows/fpga-lint.yml"
+      - ".github/scripts/verilator_to_reviewdog.py"
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
 
 jobs:
-  lint:
+  verilator:
+    name: Verilator
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Setup OSS CAD Suite
-        uses: YosysHQ/setup-oss-cad-suite@v3
+      - name: Install Verilator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y verilator
+
+      - name: Setup reviewdog
+        uses: reviewdog/action-setup@v1
 
       - name: Show tool versions
         run: |
           verilator --version
-          verible-verilog-lint --version
+          reviewdog -version
 
-      - name: Verilator lint
+      - name: Build Verilator file list
         run: |
-          verilator --lint-only -Wall -f .config/fpga/verilator.f
+          mkdir -p .tmp
+          {
+            echo "+incdir+src/myip/arec_1_0/hdl"
+            find src/myip/arec_1_0/hdl \
+              -type f \( -name "*.v" -o -name "*.sv" -o -name "*.vh" -o -name "*.svh" \) \
+              | sort
+          } > .tmp/verilator.f
 
-      - name: Verible lint
+          echo "===== .tmp/verilator.f ====="
+          cat .tmp/verilator.f
+
+      - name: Run Verilator lint
+        id: verilator
         run: |
-          files=$(find src/myip/xxx/hdl -type f \( -name "*.v" -o -name "*.sv" -o -name "*.vh" -o -name "*.svh" \))
-          if [ -n "$files" ]; then
-            verible-verilog-lint --rules_config=.config/fpga/verible.rules $files
+          set +e
+          verilator --lint-only -Wall -f .tmp/verilator.f 2>&1 | tee .tmp/verilator.log
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Convert Verilator log for reviewdog
+        run: |
+          python3 .github/scripts/verilator_to_reviewdog.py < .tmp/verilator.log > .tmp/verilator.rd || true
+          echo "===== .tmp/verilator.rd ====="
+          cat .tmp/verilator.rd || true
+
+      - name: Report Verilator diagnostics to PR review
+        if: always()
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -s .tmp/verilator.rd ]; then
+            reviewdog \
+              -efm="%f:%l:%c: %m" \
+              -name="verilator" \
+              -reporter=github-pr-review \
+              -filter-mode=added \
+              -level=warning \
+              < .tmp/verilator.rd
           else
-            echo "No Verilog/SystemVerilog files found."
+            echo "No Verilator diagnostics to report."
           fi
+
+      - name: Fail job if Verilator found issues
+        if: steps.verilator.outputs.status != '0'
+        run: |
+          echo "Verilator reported lint issues."
+          exit 1
+
+  verible:
+    name: Verible
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Run Verible linter
+        uses: chipsalliance/verible-linter-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          paths: |
+            ./src/myip/arec_1_0/hdl
+          extensions: |
+            .v
+            .sv
+            .vh
+            .svh
+          config_file: ./.config/fpga/verible.rules
+          reviewdog_reporter: github-pr-review
+          extra_args: "--check_syntax=true"
