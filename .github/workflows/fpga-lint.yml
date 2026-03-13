@@ -72,7 +72,6 @@ jobs:
         run: |
           if [ -s .tmp/verilator.rd ]; then
             reviewdog \
-              -f=efm \
               -efm="%f:%l:%c: %m" \
               -name="verilator" \
               -reporter=github-pr-check \
