@@ -52,15 +52,6 @@ module bram_ctrl #(
     wire [ADDR_W:0]     w_dump_len;
     wire [WEA_W-1:0]    w_wea;
 
-    // CIテスト用
-    wire [3:0] small;
-    wire [7:0] big;
-    assign small = big;
-    assign y = a;
-
-    always @(posedge clk)
-      q = d;
-
     assign w_wea = {WEA_W{w_bram_we}};
 
     // -------------------------------
