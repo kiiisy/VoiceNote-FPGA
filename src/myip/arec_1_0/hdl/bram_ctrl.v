@@ -52,6 +52,9 @@ module bram_ctrl #(
     wire [ADDR_W:0]     w_dump_len;
     wire [WEA_W-1:0]    w_wea;
 
+    // CIテスト用
+    assign w_wea = undefined_signal;
+
     assign w_wea = {WEA_W{w_bram_we}};
 
     // -------------------------------
