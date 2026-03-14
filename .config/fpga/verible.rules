@@ -1,2 +1,7 @@
 -module-filename
 -line-length
++explicit-begin
++case-missing-default
++always-ff-non-blocking
++explicit-parameter-storage-type
++generate-label

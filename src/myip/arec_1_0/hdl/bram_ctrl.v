@@ -52,10 +52,6 @@ module bram_ctrl #(
     wire [ADDR_W:0]     w_dump_len;
     wire [WEA_W-1:0]    w_wea;
 
-    wire [3:0] small_sig;
-    wire [7:0] big_sig;
-    assign small_sig = big_sig;
-
     assign w_wea = {WEA_W{w_bram_we}};
 
     // -------------------------------
@@ -81,7 +77,7 @@ module bram_ctrl #(
     // -------------------------------
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            r_start_ptr <= {ADDR_W{1'b0}}
+            r_start_ptr <= {ADDR_W{1'b0}};
         end else begin
             if (cap_start_ptr) begin
                 r_start_ptr <= w_start_ptr_calc3;
