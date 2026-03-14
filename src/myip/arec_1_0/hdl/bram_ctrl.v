@@ -75,7 +75,7 @@ module bram_ctrl #(
     // -------------------------------
     // DUMP遷移確定時点のwr_ptr基準で開始アドレスをラッチ
     // -------------------------------
-    always @(posedge clk or posedge reset)
+    always @(posedge clk or posedge reset) begin
         if (reset) begin
             r_start_ptr <= {ADDR_W{1'b0}};
         end else begin
@@ -85,7 +85,7 @@ module bram_ctrl #(
                 r_start_ptr <= {ADDR_W{1'b0}};
             end
         end
-
+    end
 
     wr_ctrl #(
         .DEPTH (DEPTH),
