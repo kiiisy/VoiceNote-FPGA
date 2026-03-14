@@ -13,6 +13,10 @@ module scenario_003;
         // boundary test
         `TB.set_arec_trigger_recording_cfg_reg(16'h0300, 5'd6, 12'd512, 4'd2);
         `TB.wait_irq_assert();
+        if (`TB.r_scenario_fail_cnt != 0) begin
+            `TB.scenario_end();
+            return;
+        end
         `TB.clear_irq_w1c();
         `TB.scenario_expect((`TB.irq === 1'b0), "irq clear failed");
         `TB.wait_until_arec_pass_state();

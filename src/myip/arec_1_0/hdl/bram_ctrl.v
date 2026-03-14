@@ -82,7 +82,7 @@ module bram_ctrl #(
             if (cap_start_ptr) begin
                 r_start_ptr <= w_start_ptr_calc3;
             end else begin
-                r_start_ptr <= {ADDR_W{1'b0}};
+                r_start_ptr <= r_start_ptr;
             end
         end
     end

@@ -42,6 +42,7 @@ axi4stream_monitor_transaction mon_tr;
 int max_abs_diff;
 int mismatch_cnt;
 int r_scenario_fail_cnt;
+int r_ref_fail_cnt;
 bit r_scenario_pass;
 string r_scenario_name;
 
@@ -86,28 +87,32 @@ scenario_004 u_s004();
 scenario_005 u_s005();
 
 // ------------------------------------------------------------
+// サイクル精度参照モデル
+// ------------------------------------------------------------
+`include "tb_ref_model.svh"
+
+// ------------------------------------------------------------
 // AXIS monitor (モノラルCSV→ステレオAXIS: L/R同じ)
 // ------------------------------------------------------------
 task automatic monitor_output();
     logic [31:0]             tdata_word;
     shortint                 sample_q15;
     xil_axi4stream_data_byte data_bytes[4];
-    int                      ch_idx = 0;
+    int unsigned             beat_id;
 
     forever begin
         // AXI Streamの1トランザクション取得
         axistream_slv.monitor.item_collected_port.get(mon_tr);
 
         mon_tr.get_data(data_bytes);
+        beat_id   = mon_tr.get_id();
         tdata_word = { data_bytes[3], data_bytes[2], data_bytes[1], data_bytes[0] };
         sample_q15 = shortint'(tdata_word[27:12]);
 
-        // Leftチャンネルのみ書き出し
-        if (ch_idx == 0) begin
+        // Leftチャンネル(tid=0)のみ書き出し
+        if (beat_id[0] == 1'b0) begin
             csv_output_write_q15(sample_q15);
         end
-
-        ch_idx ^= 1;
     end
 endtask
 
@@ -118,6 +123,7 @@ initial begin
     int scenario_id;
 
     r_scenario_fail_cnt = 0;
+    r_ref_fail_cnt = 0;
     r_scenario_pass = 1'b0;
     r_scenario_name = "";
 
@@ -206,16 +212,24 @@ final begin
     csv_output_close(max_abs_diff, mismatch_cnt);
     $display("[CMP] max_abs_diff=%0d, mismatch_cnt=%0d", max_abs_diff, mismatch_cnt);
 
-    if ((max_abs_diff > 1) || (mismatch_cnt > 0)) begin
-        $error("[CMP][FAIL] compare failed (max_abs_diff=%0d, mismatch_cnt=%0d)",
-               max_abs_diff, mismatch_cnt);
+    // ARECではCSV比較は参考情報として扱う。
+    // 合否判定はREF比較とシナリオ固有チェックで行う。
+    if (mismatch_cnt > 0) begin
+        $display("[CMP][INFO] compare mismatch exists (mismatch_cnt=%0d, max_abs_diff=%0d)",
+                 mismatch_cnt, max_abs_diff);
     end else begin
-        $display("[CMP][PASS] compare passed");
+        $display("[CMP][INFO] compare passed (max_abs_diff=%0d)", max_abs_diff);
     end
 
     if (r_scenario_name != "") begin
         $display("[SCENARIO] name=%s result=%s fail_cnt=%0d",
                  r_scenario_name, r_scenario_pass ? "PASS" : "FAIL", r_scenario_fail_cnt);
+    end
+
+    if (r_ref_fail_cnt != 0) begin
+        $error("[REF][FAIL] ref model mismatch count=%0d", r_ref_fail_cnt);
+    end else begin
+        $display("[REF][PASS] ref model matched");
     end
 end
 

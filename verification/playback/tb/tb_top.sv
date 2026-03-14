@@ -15,7 +15,7 @@ module tb_playback;
     localparam int UART_BITS_PER_BYTE  = 10;   // Start + 8bit + Stop
     localparam int UART_BYTES_PER_FRAME= 9;
     localparam int UART_FRAME_CLKS     = BAUD_DIV * UART_BITS_PER_BYTE * UART_BYTES_PER_FRAME;
-    // uart_tx_model と同じ値にしておく
+
     localparam int FRAME_INTERVAL_CLKS = 400_000; // 4ms
     localparam int UART_WAIT_FRAMES    = 1;       // 3フレームぶん待つ
     localparam int UART_PREROLL_CLKS   = UART_WAIT_FRAMES * (UART_FRAME_CLKS + FRAME_INTERVAL_CLKS);
@@ -43,7 +43,6 @@ module tb_playback;
   // ------------------------------------------------------------
 
   // AXI-Lite Master（AGCレジスタ書き込み用）
-  // ※型名はパッケージに合わせて
   playback_test_axi_vip_0_0_mst_t        axi_agc_mst;
 
   // AXIS Master（calculation への入力ストリーム）
@@ -87,9 +86,9 @@ module tb_playback;
   initial begin
     csv_output_init(
       // HW 出力を書き出す CSV
-      "../../../../../../verification/AGC/output/playback_case1_hw.csv",
-      // golden 側 (AGC適用後S16の期待値)
-      "../../../../../../verification/AGC/output/playback_case1_golden.csv"
+      "../../../../../../verification/playback/output/playback_case1_hw.csv",
+      // golden 側
+      "../../../../../../verification/playback/output/playback_case1_golden.csv"
     );
   end
 
@@ -107,7 +106,7 @@ module tb_playback;
   // ------------------------------------------------------------
   initial begin
     aresetn = 0;
-    rx      = 1'b1; // UART idle 高
+    rx      = 1'b1;
     repeat (20) @(posedge aclk);
     aresetn = 1;
 
@@ -127,7 +126,7 @@ module tb_playback;
 
     repeat (10) @(posedge aclk);
 
-    // AGC IP のレジスタ初期化（AXI-Lite）
+    // AGC IP のレジスタ初期化
     program_agc();
 
     //repeat (5) @(posedge aclk);
@@ -157,7 +156,6 @@ module tb_playback;
 
   // ============================================================
   // AGC IP のレジスタ初期化
-  //   ※オフセットや値は実際のレジスタマップに合わせて変更してください
   // ============================================================
   task automatic program_agc();
     // ゲイン上下限 (Q2.14)
@@ -185,7 +183,7 @@ module tb_playback;
         logic [31:0] tdata_word;
         int ch;
 
-        csv_path = "../../../../../../verification/AGC/input/playback_case1_input.csv";
+        csv_path = "../../../../../../verification/playback/input/playback_case1_input.csv";
         csv_init(csv_path);
 
         forever begin
@@ -199,7 +197,7 @@ module tb_playback;
             tdata_word        = 32'd0;
             tdata_word[27:12] = sample_q15[15:0];
 
-            // ---- ここがポイント：L(0)とR(1)を2回送る ----
+            // L(0)とR(1)を2回送る
             for (ch = 0; ch < 2; ch++) begin
                 axis_tr = axis_src_mst.driver.create_transaction($sformatf("tr_ch%d", ch));
 

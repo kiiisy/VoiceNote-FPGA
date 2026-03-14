@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_playback_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi4stream_vip_pkg" />
+            <top_module name="axi_vip_pkg" />
+            <top_module name="csv_pkg" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="tb_playback" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3,992,855.365 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,993,455.366 ns"></ZoomEndTime>
+      <Cursor1Time time="3,993,145.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="216"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+      <marker label="" time="4000002227" />
+   </wave_markers>
+   <wvobject type="group" fp_name="group162">
+      <obj_property name="label">uart</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/rx">
+         <obj_property name="ElementShortName">rx</obj_property>
+         <obj_property name="ObjectShortName">rx</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/data">
+         <obj_property name="ElementShortName">data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/valid">
+         <obj_property name="ElementShortName">valid</obj_property>
+         <obj_property name="ObjectShortName">valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/frame_error">
+         <obj_property name="ElementShortName">frame_error</obj_property>
+         <obj_property name="ObjectShortName">frame_error</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_state">
+         <obj_property name="ElementShortName">r_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">r_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_bit_idx">
+         <obj_property name="ElementShortName">r_bit_idx[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_bit_idx[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_shift_reg">
+         <obj_property name="ElementShortName">r_shift_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_shift_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_data">
+         <obj_property name="ElementShortName">r_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_valid">
+         <obj_property name="ElementShortName">r_valid</obj_property>
+         <obj_property name="ObjectShortName">r_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_frame_error">
+         <obj_property name="ElementShortName">r_frame_error</obj_property>
+         <obj_property name="ObjectShortName">r_frame_error</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_baud_cnt">
+         <obj_property name="ElementShortName">r_baud_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_baud_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_uart_rx/r_baud_tick">
+         <obj_property name="ElementShortName">r_baud_tick</obj_property>
+         <obj_property name="ObjectShortName">r_baud_tick</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group118">
+      <obj_property name="label">parser</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/rx_byte">
+         <obj_property name="ElementShortName">rx_byte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_byte[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/rx_valid">
+         <obj_property name="ElementShortName">rx_valid</obj_property>
+         <obj_property name="ObjectShortName">rx_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/dist_mm">
+         <obj_property name="ElementShortName">dist_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dist_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/pkt_error">
+         <obj_property name="ElementShortName">pkt_error</obj_property>
+         <obj_property name="ObjectShortName">pkt_error</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/tof_working">
+         <obj_property name="ElementShortName">tof_working</obj_property>
+         <obj_property name="ObjectShortName">tof_working</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_state">
+         <obj_property name="ElementShortName">r_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">r_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_next_state">
+         <obj_property name="ElementShortName">r_next_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_idx">
+         <obj_property name="ElementShortName">r_idx[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_idx[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_buf">
+         <obj_property name="ElementShortName">r_buf[0:5][7:0]</obj_property>
+         <obj_property name="ObjectShortName">r_buf[0:5][7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_checksum">
+         <obj_property name="ElementShortName">r_checksum[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_checksum[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_dist_mm">
+         <obj_property name="ElementShortName">r_dist_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_dist_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_dist_valid">
+         <obj_property name="ElementShortName">r_dist_valid</obj_property>
+         <obj_property name="ObjectShortName">r_dist_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_pkt_error">
+         <obj_property name="ElementShortName">r_pkt_error</obj_property>
+         <obj_property name="ObjectShortName">r_pkt_error</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_checksum_done">
+         <obj_property name="ElementShortName">r_checksum_done</obj_property>
+         <obj_property name="ObjectShortName">r_checksum_done</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_watchdog_cnt">
+         <obj_property name="ElementShortName">r_watchdog_cnt[23:0]</obj_property>
+         <obj_property name="ObjectShortName">r_watchdog_cnt[23:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist_if/U_frame_parser/r_tof_working">
+         <obj_property name="ElementShortName">r_tof_working</obj_property>
+         <obj_property name="ObjectShortName">r_tof_working</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group100">
+      <obj_property name="label">dist2gain</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/dist_sensitivity_reg">
+         <obj_property name="ElementShortName">dist_sensitivity_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dist_sensitivity_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/dist_data">
+         <obj_property name="ElementShortName">dist_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dist_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/dist_valid">
+         <obj_property name="ElementShortName">dist_valid</obj_property>
+         <obj_property name="ObjectShortName">dist_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/gain_data">
+         <obj_property name="ElementShortName">gain_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">gain_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/gain_valid">
+         <obj_property name="ElementShortName">gain_valid</obj_property>
+         <obj_property name="ObjectShortName">gain_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/dist_raw_mm">
+         <obj_property name="ElementShortName">dist_raw_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dist_raw_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/dist_clamp_mm">
+         <obj_property name="ElementShortName">dist_clamp_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dist_clamp_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_state">
+         <obj_property name="ElementShortName">r_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_next_state">
+         <obj_property name="ElementShortName">r_next_state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_dist_raw_mm">
+         <obj_property name="ElementShortName">r_dist_raw_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_dist_raw_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_dist_diff_mm">
+         <obj_property name="ElementShortName">r_dist_diff_mm[16:0]</obj_property>
+         <obj_property name="ObjectShortName">r_dist_diff_mm[16:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_dist_clamped_mm">
+         <obj_property name="ElementShortName">r_dist_clamped_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_dist_clamped_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_offset_mm">
+         <obj_property name="ElementShortName">r_offset_mm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_offset_mm[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_addr">
+         <obj_property name="ElementShortName">r_addr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">r_addr[6:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_rden">
+         <obj_property name="ElementShortName">r_rden</obj_property>
+         <obj_property name="ObjectShortName">r_rden</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_wait_cnt">
+         <obj_property name="ElementShortName">r_wait_cnt[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_wait_cnt[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_dist2gain/r_pre_dist">
+         <obj_property name="ElementShortName">r_pre_dist[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_pre_dist[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group99">
+      <obj_property name="label">iir</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/update_en">
+         <obj_property name="ElementShortName">update_en</obj_property>
+         <obj_property name="ObjectShortName">update_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/target_gain">
+         <obj_property name="ElementShortName">target_gain[15:0]</obj_property>
+         <obj_property name="ObjectShortName">target_gain[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/control_reg">
+         <obj_property name="ElementShortName">control_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">control_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/alpha_config_reg">
+         <obj_property name="ElementShortName">alpha_config_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alpha_config_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/gain_min_reg">
+         <obj_property name="ElementShortName">gain_min_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">gain_min_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/gain_max_reg">
+         <obj_property name="ElementShortName">gain_max_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">gain_max_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/smooth_gain">
+         <obj_property name="ElementShortName">smooth_gain[15:0]</obj_property>
+         <obj_property name="ObjectShortName">smooth_gain[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/r_state">
+         <obj_property name="ElementShortName">r_state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_state[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/r_next_state">
+         <obj_property name="ElementShortName">r_next_state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_state[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/r_diff">
+         <obj_property name="ElementShortName">r_diff[17:0]</obj_property>
+         <obj_property name="ObjectShortName">r_diff[17:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/r_gain_smooth">
+         <obj_property name="ElementShortName">r_gain_smooth[17:0]</obj_property>
+         <obj_property name="ObjectShortName">r_gain_smooth[17:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/r_step">
+         <obj_property name="ElementShortName">r_step[17:0]</obj_property>
+         <obj_property name="ObjectShortName">r_step[17:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_iir_filter/r_next_gain">
+         <obj_property name="ElementShortName">r_next_gain[17:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_gain[17:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group149">
+      <obj_property name="label">calc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/s_axis_tdata">
+         <obj_property name="ElementShortName">s_axis_tdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/s_axis_tvalid">
+         <obj_property name="ElementShortName">s_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/s_axis_tready">
+         <obj_property name="ElementShortName">s_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/s_axis_tid">
+         <obj_property name="ElementShortName">s_axis_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/m_axis_tid">
+         <obj_property name="ElementShortName">m_axis_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/smooth_gain">
+         <obj_property name="ElementShortName">smooth_gain[15:0]</obj_property>
+         <obj_property name="ObjectShortName">smooth_gain[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/clip_flg">
+         <obj_property name="ElementShortName">clip_flg</obj_property>
+         <obj_property name="ObjectShortName">clip_flg</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_valid">
+         <obj_property name="ElementShortName">r_s0_valid</obj_property>
+         <obj_property name="ObjectShortName">r_s0_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_tid">
+         <obj_property name="ElementShortName">r_s0_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s0_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_P">
+         <obj_property name="ElementShortName">r_s0_P</obj_property>
+         <obj_property name="ObjectShortName">r_s0_P</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_C">
+         <obj_property name="ElementShortName">r_s0_C</obj_property>
+         <obj_property name="ObjectShortName">r_s0_C</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_U">
+         <obj_property name="ElementShortName">r_s0_U</obj_property>
+         <obj_property name="ObjectShortName">r_s0_U</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_V">
+         <obj_property name="ElementShortName">r_s0_V</obj_property>
+         <obj_property name="ObjectShortName">r_s0_V</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_preamble">
+         <obj_property name="ElementShortName">r_s0_preamble[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s0_preamble[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s0_sample">
+         <obj_property name="ElementShortName">r_s0_sample[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s0_sample[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_valid">
+         <obj_property name="ElementShortName">r_s1_valid</obj_property>
+         <obj_property name="ObjectShortName">r_s1_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_tid">
+         <obj_property name="ElementShortName">r_s1_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s1_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_P">
+         <obj_property name="ElementShortName">r_s1_P</obj_property>
+         <obj_property name="ObjectShortName">r_s1_P</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_C">
+         <obj_property name="ElementShortName">r_s1_C</obj_property>
+         <obj_property name="ObjectShortName">r_s1_C</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_U">
+         <obj_property name="ElementShortName">r_s1_U</obj_property>
+         <obj_property name="ObjectShortName">r_s1_U</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_V">
+         <obj_property name="ElementShortName">r_s1_V</obj_property>
+         <obj_property name="ObjectShortName">r_s1_V</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s1_preamble">
+         <obj_property name="ElementShortName">r_s1_preamble[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s1_preamble[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_product_reg">
+         <obj_property name="ElementShortName">r_product_reg[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_product_reg[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s2_valid">
+         <obj_property name="ElementShortName">r_s2_valid</obj_property>
+         <obj_property name="ObjectShortName">r_s2_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s2_tid">
+         <obj_property name="ElementShortName">r_s2_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s2_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s2_tdata">
+         <obj_property name="ElementShortName">r_s2_tdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_s2_tdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_playback/dut/agc_0/inst/U_core/U_calculation/r_s2_clip">
+         <obj_property name="ElementShortName">r_s2_clip</obj_property>
+         <obj_property name="ObjectShortName">r_s2_clip</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

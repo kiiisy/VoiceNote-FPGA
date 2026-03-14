@@ -3,45 +3,114 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_arec_behav.wdb" id="1">
+      <db_ref path="tb_top_behav.wdb" id="1">
          <top_modules>
             <top_module name="axi4stream_vip_pkg" />
             <top_module name="axi_vip_pkg" />
             <top_module name="csv_pkg" />
             <top_module name="glbl" />
             <top_module name="std" />
-            <top_module name="tb_arec" />
+            <top_module name="tb_top" />
             <top_module name="xil_common_vip_pkg" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5,455.419854 us"></ZoomStartTime>
-      <ZoomEndTime time="5,529.719855 us"></ZoomEndTime>
-      <Cursor1Time time="5,505.185000 us"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="62.548525001 ms"></ZoomEndTime>
+      <Cursor1Time time="62.548525000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="187"></NameColumnWidth>
-      <ValueColumnWidth column_width="69"></ValueColumnWidth>
+      <NameColumnWidth column_width="186"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="8" />
    <wvobject type="group" fp_name="group1226">
       <obj_property name="label">s_axis</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/s00_axis_tdata">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata">
          <obj_property name="ElementShortName">s00_axis_tdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axis_tdata[31:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/s00_axis_tvalid">
+      <wvobject type="vbus" fp_name="vbus3222">
+         <obj_property name="label">data16</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[27]">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">[27]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[26]">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">[26]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[25]">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">[25]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[24]">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">[24]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[23]">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">[23]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[22]">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">[22]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[21]">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">[21]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[20]">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">[20]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[19]">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">[19]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[18]">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">[18]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[17]">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">[17]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[16]">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">[16]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tdata[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tvalid">
          <obj_property name="ElementShortName">s00_axis_tvalid</obj_property>
          <obj_property name="ObjectShortName">s00_axis_tvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/s00_axis_tready">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tready">
          <obj_property name="ElementShortName">s00_axis_tready</obj_property>
          <obj_property name="ObjectShortName">s00_axis_tready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/s00_axis_tid">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/s00_axis_tid">
          <obj_property name="ElementShortName">s00_axis_tid[2:0]</obj_property>
          <obj_property name="ObjectShortName">s00_axis_tid[2:0]</obj_property>
       </wvobject>
@@ -50,88 +119,88 @@
       <obj_property name="label">m_axis</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata">
          <obj_property name="ElementShortName">m00_axis_tdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tdata[31:0]</obj_property>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus1624">
+      <wvobject type="vbus" fp_name="vbus3275">
          <obj_property name="label">data16</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[27]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[27]">
             <obj_property name="ElementShortName">[27]</obj_property>
             <obj_property name="ObjectShortName">[27]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[26]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[26]">
             <obj_property name="ElementShortName">[26]</obj_property>
             <obj_property name="ObjectShortName">[26]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[25]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[25]">
             <obj_property name="ElementShortName">[25]</obj_property>
             <obj_property name="ObjectShortName">[25]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[24]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[24]">
             <obj_property name="ElementShortName">[24]</obj_property>
             <obj_property name="ObjectShortName">[24]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[23]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[23]">
             <obj_property name="ElementShortName">[23]</obj_property>
             <obj_property name="ObjectShortName">[23]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[22]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[22]">
             <obj_property name="ElementShortName">[22]</obj_property>
             <obj_property name="ObjectShortName">[22]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[21]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[21]">
             <obj_property name="ElementShortName">[21]</obj_property>
             <obj_property name="ObjectShortName">[21]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[20]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[20]">
             <obj_property name="ElementShortName">[20]</obj_property>
             <obj_property name="ObjectShortName">[20]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[19]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[19]">
             <obj_property name="ElementShortName">[19]</obj_property>
             <obj_property name="ObjectShortName">[19]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[18]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[18]">
             <obj_property name="ElementShortName">[18]</obj_property>
             <obj_property name="ObjectShortName">[18]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[17]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[17]">
             <obj_property name="ElementShortName">[17]</obj_property>
             <obj_property name="ObjectShortName">[17]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[16]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[16]">
             <obj_property name="ElementShortName">[16]</obj_property>
             <obj_property name="ObjectShortName">[16]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[15]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[15]">
             <obj_property name="ElementShortName">[15]</obj_property>
             <obj_property name="ObjectShortName">[15]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[14]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[14]">
             <obj_property name="ElementShortName">[14]</obj_property>
             <obj_property name="ObjectShortName">[14]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[13]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[13]">
             <obj_property name="ElementShortName">[13]</obj_property>
             <obj_property name="ObjectShortName">[13]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tdata[12]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tdata[12]">
             <obj_property name="ElementShortName">[12]</obj_property>
             <obj_property name="ObjectShortName">[12]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tvalid">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tvalid">
          <obj_property name="ElementShortName">m00_axis_tvalid</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tvalid</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/m00_axis_tready">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tready">
          <obj_property name="ElementShortName">m00_axis_tready</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/m00_axis_tid">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/m00_axis_tid">
          <obj_property name="ElementShortName">m00_axis_tid[2:0]</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tid[2:0]</obj_property>
       </wvobject>
@@ -140,289 +209,340 @@
       <obj_property name="label">core_ctrl</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/r_state">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/r_state">
          <obj_property name="ElementShortName">r_state[1:0]</obj_property>
          <obj_property name="ObjectShortName">r_state[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/r_next_state">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/r_next_state">
          <obj_property name="ElementShortName">r_next_state[1:0]</obj_property>
          <obj_property name="ObjectShortName">r_next_state[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/r_state_prev">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/r_state_prev">
          <obj_property name="ElementShortName">r_state_prev[1:0]</obj_property>
          <obj_property name="ObjectShortName">r_state_prev[1:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/r_trigger_flg">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/r_trigger_flg">
          <obj_property name="ElementShortName">r_trigger_flg</obj_property>
          <obj_property name="ObjectShortName">r_trigger_flg</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/r_rearm_block">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/r_rearm_block">
          <obj_property name="ElementShortName">r_rearm_block</obj_property>
          <obj_property name="ObjectShortName">r_rearm_block</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/w_dump_start">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/w_dump_start">
          <obj_property name="ElementShortName">w_dump_start</obj_property>
          <obj_property name="ObjectShortName">w_dump_start</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_core_ctrl/r_irq_dump">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/r_irq_dump">
          <obj_property name="ElementShortName">r_irq_dump</obj_property>
          <obj_property name="ObjectShortName">r_irq_dump</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/en_stream2data">
+         <obj_property name="ElementShortName">en_stream2data</obj_property>
+         <obj_property name="ObjectShortName">en_stream2data</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/en_wr">
+         <obj_property name="ElementShortName">en_wr</obj_property>
+         <obj_property name="ObjectShortName">en_wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/en_rd">
+         <obj_property name="ElementShortName">en_rd</obj_property>
+         <obj_property name="ObjectShortName">en_rd</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/start_dump">
+         <obj_property name="ElementShortName">start_dump</obj_property>
+         <obj_property name="ObjectShortName">start_dump</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/cap_start_ptr">
+         <obj_property name="ElementShortName">cap_start_ptr</obj_property>
+         <obj_property name="ObjectShortName">cap_start_ptr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_core_ctrl/is_dump">
+         <obj_property name="ElementShortName">is_dump</obj_property>
+         <obj_property name="ObjectShortName">is_dump</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group1234">
       <obj_property name="label">wr_ctrl</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/en">
-         <obj_property name="ElementShortName">en</obj_property>
-         <obj_property name="ObjectShortName">en</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_waddr">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_waddr">
          <obj_property name="ElementShortName">r_waddr[10:0]</obj_property>
          <obj_property name="ObjectShortName">r_waddr[10:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata">
          <obj_property name="ElementShortName">r_wdata[35:0]</obj_property>
          <obj_property name="ObjectShortName">r_wdata[35:0]</obj_property>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus1350">
+      <wvobject type="vbus" fp_name="vbus3354">
          <obj_property name="label">data16</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[28]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[28]">
             <obj_property name="ElementShortName">[28]</obj_property>
             <obj_property name="ObjectShortName">[28]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[27]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[27]">
             <obj_property name="ElementShortName">[27]</obj_property>
             <obj_property name="ObjectShortName">[27]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[26]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[26]">
             <obj_property name="ElementShortName">[26]</obj_property>
             <obj_property name="ObjectShortName">[26]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[25]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[25]">
             <obj_property name="ElementShortName">[25]</obj_property>
             <obj_property name="ObjectShortName">[25]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[24]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[24]">
             <obj_property name="ElementShortName">[24]</obj_property>
             <obj_property name="ObjectShortName">[24]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[23]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[23]">
             <obj_property name="ElementShortName">[23]</obj_property>
             <obj_property name="ObjectShortName">[23]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[22]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[22]">
             <obj_property name="ElementShortName">[22]</obj_property>
             <obj_property name="ObjectShortName">[22]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[21]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[21]">
             <obj_property name="ElementShortName">[21]</obj_property>
             <obj_property name="ObjectShortName">[21]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[20]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[20]">
             <obj_property name="ElementShortName">[20]</obj_property>
             <obj_property name="ObjectShortName">[20]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[19]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[19]">
             <obj_property name="ElementShortName">[19]</obj_property>
             <obj_property name="ObjectShortName">[19]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[18]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[18]">
             <obj_property name="ElementShortName">[18]</obj_property>
             <obj_property name="ObjectShortName">[18]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[17]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[17]">
             <obj_property name="ElementShortName">[17]</obj_property>
             <obj_property name="ObjectShortName">[17]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[16]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[16]">
             <obj_property name="ElementShortName">[16]</obj_property>
             <obj_property name="ObjectShortName">[16]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[15]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[15]">
             <obj_property name="ElementShortName">[15]</obj_property>
             <obj_property name="ObjectShortName">[15]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[14]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[14]">
             <obj_property name="ElementShortName">[14]</obj_property>
             <obj_property name="ObjectShortName">[14]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wdata[13]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wdata[13]">
             <obj_property name="ElementShortName">[13]</obj_property>
             <obj_property name="ObjectShortName">[13]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_wr_ptr">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_wr_ptr">
          <obj_property name="ElementShortName">r_wr_ptr[10:0]</obj_property>
          <obj_property name="ObjectShortName">r_wr_ptr[10:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/r_bram_we">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/en">
+         <obj_property name="ElementShortName">en</obj_property>
+         <obj_property name="ObjectShortName">en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/r_bram_we">
          <obj_property name="ElementShortName">r_bram_we</obj_property>
          <obj_property name="ObjectShortName">r_bram_we</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_wr_ctrl/w_accept">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/w_accept">
          <obj_property name="ElementShortName">w_accept</obj_property>
          <obj_property name="ObjectShortName">w_accept</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/in_valid">
+         <obj_property name="ElementShortName">in_valid</obj_property>
+         <obj_property name="ObjectShortName">in_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_wr_ctrl/in_ready">
+         <obj_property name="ElementShortName">in_ready</obj_property>
+         <obj_property name="ObjectShortName">in_ready</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group1251">
       <obj_property name="label">rd_ctrl</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/en">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/en">
          <obj_property name="ElementShortName">en</obj_property>
          <obj_property name="ObjectShortName">en</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/start_dump">
-         <obj_property name="ElementShortName">start_dump</obj_property>
-         <obj_property name="ObjectShortName">start_dump</obj_property>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/out_valid">
+         <obj_property name="ElementShortName">out_valid</obj_property>
+         <obj_property name="ObjectShortName">out_valid</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/dump_len">
-         <obj_property name="ElementShortName">dump_len[11:0]</obj_property>
-         <obj_property name="ObjectShortName">dump_len[11:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/out_ready">
+         <obj_property name="ElementShortName">out_ready</obj_property>
+         <obj_property name="ObjectShortName">out_ready</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/start_ptr">
-         <obj_property name="ElementShortName">start_ptr[10:0]</obj_property>
-         <obj_property name="ObjectShortName">start_ptr[10:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_state">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_state">
          <obj_property name="ElementShortName">r_state[1:0]</obj_property>
          <obj_property name="ObjectShortName">r_state[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_next_state">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_next_state">
          <obj_property name="ElementShortName">r_next_state[1:0]</obj_property>
          <obj_property name="ObjectShortName">r_next_state[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_ptr">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_ptr">
          <obj_property name="ElementShortName">r_ptr[10:0]</obj_property>
          <obj_property name="ObjectShortName">r_ptr[10:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_rest_read_num">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_rest_read_num">
          <obj_property name="ElementShortName">r_rest_read_num[11:0]</obj_property>
          <obj_property name="ObjectShortName">r_rest_read_num[11:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_wait_cnt">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_wait_cnt">
          <obj_property name="ElementShortName">r_wait_cnt[0:0]</obj_property>
          <obj_property name="ObjectShortName">r_wait_cnt[0:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_out_packed">
          <obj_property name="ElementShortName">r_out_packed[35:0]</obj_property>
          <obj_property name="ObjectShortName">r_out_packed[35:0]</obj_property>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus1403">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_re">
+         <obj_property name="ElementShortName">bram_re</obj_property>
+         <obj_property name="ObjectShortName">bram_re</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_raddr">
+         <obj_property name="ElementShortName">bram_raddr[10:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_raddr[10:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata">
+         <obj_property name="ElementShortName">bram_rdata[35:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_rdata[35:0]</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus3426">
          <obj_property name="label">data16</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[28]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[28]">
             <obj_property name="ElementShortName">[28]</obj_property>
             <obj_property name="ObjectShortName">[28]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[27]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[27]">
             <obj_property name="ElementShortName">[27]</obj_property>
             <obj_property name="ObjectShortName">[27]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[26]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[26]">
             <obj_property name="ElementShortName">[26]</obj_property>
             <obj_property name="ObjectShortName">[26]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[25]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[25]">
             <obj_property name="ElementShortName">[25]</obj_property>
             <obj_property name="ObjectShortName">[25]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[24]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[24]">
             <obj_property name="ElementShortName">[24]</obj_property>
             <obj_property name="ObjectShortName">[24]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[23]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[23]">
             <obj_property name="ElementShortName">[23]</obj_property>
             <obj_property name="ObjectShortName">[23]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[22]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[22]">
             <obj_property name="ElementShortName">[22]</obj_property>
             <obj_property name="ObjectShortName">[22]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[21]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[21]">
             <obj_property name="ElementShortName">[21]</obj_property>
             <obj_property name="ObjectShortName">[21]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[20]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[20]">
             <obj_property name="ElementShortName">[20]</obj_property>
             <obj_property name="ObjectShortName">[20]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[19]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[19]">
             <obj_property name="ElementShortName">[19]</obj_property>
             <obj_property name="ObjectShortName">[19]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[18]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[18]">
             <obj_property name="ElementShortName">[18]</obj_property>
             <obj_property name="ObjectShortName">[18]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[17]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[17]">
             <obj_property name="ElementShortName">[17]</obj_property>
             <obj_property name="ObjectShortName">[17]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[16]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[16]">
             <obj_property name="ElementShortName">[16]</obj_property>
             <obj_property name="ObjectShortName">[16]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[15]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[15]">
             <obj_property name="ElementShortName">[15]</obj_property>
             <obj_property name="ObjectShortName">[15]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[14]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[14]">
             <obj_property name="ElementShortName">[14]</obj_property>
             <obj_property name="ObjectShortName">[14]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_out_packed[13]">
+         <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/bram_rdata[13]">
             <obj_property name="ElementShortName">[13]</obj_property>
             <obj_property name="ObjectShortName">[13]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_valid_data">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_valid_data">
          <obj_property name="ElementShortName">r_valid_data</obj_property>
          <obj_property name="ObjectShortName">r_valid_data</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/r_dump_done">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/r_dump_done">
          <obj_property name="ElementShortName">r_dump_done</obj_property>
          <obj_property name="ObjectShortName">r_dump_done</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/w_start_enable">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/w_start_enable">
          <obj_property name="ElementShortName">w_start_enable</obj_property>
          <obj_property name="ObjectShortName">w_start_enable</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/w_wait_done">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/w_wait_done">
          <obj_property name="ElementShortName">w_wait_done</obj_property>
          <obj_property name="ObjectShortName">w_wait_done</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/w_out_accept">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/w_out_accept">
          <obj_property name="ElementShortName">w_out_accept</obj_property>
          <obj_property name="ObjectShortName">w_out_accept</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/u_rd_ctrl/w_last_word">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/w_last_word">
          <obj_property name="ElementShortName">w_last_word</obj_property>
          <obj_property name="ObjectShortName">w_last_word</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/out_valid">
+         <obj_property name="ElementShortName">out_valid</obj_property>
+         <obj_property name="ObjectShortName">out_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/out_ready">
+         <obj_property name="ElementShortName">out_ready</obj_property>
+         <obj_property name="ObjectShortName">out_ready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/U_rd_ctrl/dump_done">
+         <obj_property name="ElementShortName">dump_done</obj_property>
+         <obj_property name="ObjectShortName">dump_done</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group1256">
       <obj_property name="label">bram_ctrl</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/r_start_ptr">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/r_start_ptr">
          <obj_property name="ElementShortName">r_start_ptr[10:0]</obj_property>
          <obj_property name="ObjectShortName">r_start_ptr[10:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/w_start_ptr_calc1">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/w_start_ptr_calc1">
          <obj_property name="ElementShortName">w_start_ptr_calc1[11:0]</obj_property>
          <obj_property name="ObjectShortName">w_start_ptr_calc1[11:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/w_start_ptr_calc2">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/w_start_ptr_calc2">
          <obj_property name="ElementShortName">w_start_ptr_calc2[10:0]</obj_property>
          <obj_property name="ObjectShortName">w_start_ptr_calc2[10:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_bram_ctrl/w_start_ptr_calc3">
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_bram_ctrl/w_start_ptr_calc3">
          <obj_property name="ElementShortName">w_start_ptr_calc3[10:0]</obj_property>
          <obj_property name="ObjectShortName">w_start_ptr_calc3[10:0]</obj_property>
       </wvobject>
@@ -430,21 +550,117 @@
    <wvobject type="group" fp_name="group1260">
       <obj_property name="label">data2stream</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_data2stream/w_accept">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/r_valid">
+         <obj_property name="ElementShortName">r_valid</obj_property>
+         <obj_property name="ObjectShortName">r_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/r_tdata">
+         <obj_property name="ElementShortName">r_tdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_tdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/r_tid">
+         <obj_property name="ElementShortName">r_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">r_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/w_accept">
          <obj_property name="ElementShortName">w_accept</obj_property>
          <obj_property name="ObjectShortName">w_accept</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_data2stream/w_out_handshake">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/w_out_handshake">
          <obj_property name="ElementShortName">w_out_handshake</obj_property>
          <obj_property name="ObjectShortName">w_out_handshake</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/inst/U_core/U_data2stream/w_in_handshake">
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/w_in_handshake">
          <obj_property name="ElementShortName">w_in_handshake</obj_property>
          <obj_property name="ObjectShortName">w_in_handshake</obj_property>
       </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/w_in_tid">
+         <obj_property name="ElementShortName">w_in_tid[2:0]</obj_property>
+         <obj_property name="ObjectShortName">w_in_tid[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_data2stream/w_in_tdata">
+         <obj_property name="ElementShortName">w_in_tdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">w_in_tdata[31:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="logic" fp_name="/tb_arec/dut/arec_0/irq">
-      <obj_property name="ElementShortName">irq</obj_property>
-      <obj_property name="ObjectShortName">irq</obj_property>
+   <wvobject type="group" fp_name="group3469">
+      <obj_property name="label">window_detector</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/sample_stb">
+         <obj_property name="ElementShortName">sample_stb</obj_property>
+         <obj_property name="ObjectShortName">sample_stb</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/enable">
+         <obj_property name="ElementShortName">enable</obj_property>
+         <obj_property name="ObjectShortName">enable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/trigger_pulse">
+         <obj_property name="ElementShortName">trigger_pulse</obj_property>
+         <obj_property name="ObjectShortName">trigger_pulse</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/triggered_latched">
+         <obj_property name="ElementShortName">triggered_latched</obj_property>
+         <obj_property name="ObjectShortName">triggered_latched</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_state">
+         <obj_property name="ElementShortName">r_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">r_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_next_state">
+         <obj_property name="ElementShortName">r_next_state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">r_next_state[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_sum_abs">
+         <obj_property name="ElementShortName">r_sum_abs[31:0]</obj_property>
+         <obj_property name="ObjectShortName">r_sum_abs[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_window_cnt">
+         <obj_property name="ElementShortName">r_window_cnt[15:0]</obj_property>
+         <obj_property name="ObjectShortName">r_window_cnt[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_cont_window_cnt">
+         <obj_property name="ElementShortName">r_cont_window_cnt[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r_cont_window_cnt[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_trigger_pulse">
+         <obj_property name="ElementShortName">r_trigger_pulse</obj_property>
+         <obj_property name="ObjectShortName">r_trigger_pulse</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_triggered_latched">
+         <obj_property name="ElementShortName">r_triggered_latched</obj_property>
+         <obj_property name="ObjectShortName">r_triggered_latched</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/r_is_threshold_over">
+         <obj_property name="ElementShortName">r_is_threshold_over</obj_property>
+         <obj_property name="ObjectShortName">r_is_threshold_over</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_abs_sample">
+         <obj_property name="ElementShortName">w_abs_sample[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_abs_sample[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_window_last">
+         <obj_property name="ElementShortName">w_window_last[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_window_last[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_mean">
+         <obj_property name="ElementShortName">w_mean[15:0]</obj_property>
+         <obj_property name="ObjectShortName">w_mean[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_required_windows">
+         <obj_property name="ElementShortName">w_required_windows[3:0]</obj_property>
+         <obj_property name="ObjectShortName">w_required_windows[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_window_done">
+         <obj_property name="ElementShortName">w_window_done</obj_property>
+         <obj_property name="ObjectShortName">w_window_done</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_threshold_over">
+         <obj_property name="ElementShortName">w_threshold_over</obj_property>
+         <obj_property name="ObjectShortName">w_threshold_over</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_top/dut/arec_0/inst/U_core/U_window_detector/w_trigger_hit">
+         <obj_property name="ElementShortName">w_trigger_hit</obj_property>
+         <obj_property name="ObjectShortName">w_trigger_hit</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>
