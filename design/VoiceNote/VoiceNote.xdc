@@ -1,8 +1,9 @@
 # クロック設定
-create_clock -period 20833.000 -name bclk [get_ports bclk]
-create_clock -period 325.520 -name pblrc [get_ports pblrc]
-create_clock -period 325.520 -name reclrc [get_ports reclrc]
+create_generated_clock -name sclk_tx -source [get_pins design_1_i/i2s_transmitter_0/inst/aud_mclk] -divide_by 4 [get_pins design_1_i/i2s_transmitter_0/inst/sclk_out]
+create_generated_clock -name sclk_rx -source [get_pins design_1_i/i2s_receiver_0/inst/aud_mclk] -divide_by 4 [get_pins design_1_i/i2s_receiver_0/inst/sclk_out]
 
+set_false_path -from [get_pins {design_1_i/i2s_clock_mux_0/inst/i2s_clock_mux_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C}] -to [get_pins design_1_i/i2s_clock_mux_0/inst/u_bufgctrl_bclk/S0]
+set_false_path -from [get_pins {design_1_i/i2s_clock_mux_0/inst/i2s_clock_mux_slave_lite_v1_0_S00_AXI_inst/slv_reg0_reg[0]/C}] -to [get_pins design_1_i/i2s_clock_mux_0/inst/u_bufgctrl_bclk/S1]
 
 # SSM2603 Audio Codec
 set_property -dict {PACKAGE_PIN P18 IOSTANDARD LVCMOS33} [get_ports mute]
@@ -66,4 +67,5 @@ set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports rx]
 # set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports SPI1_MISO_I]
 # set_property -dict {PACKAGE_PIN U14 IOSTANDARD LVCMOS33} [get_ports RESET]
 # set_property -dict {PACKAGE_PIN U15 IOSTANDARD LVCMOS33} [get_ports DC]
+
 

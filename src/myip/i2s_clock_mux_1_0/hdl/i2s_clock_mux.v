@@ -53,7 +53,7 @@
 // Instantiation of Axi Bus Interface S00_AXI
 	wire  reg_selected_clock;
 	wire  lrclk;
-	i2s_clock_mux_slave_lite_v1_0_S00_AXI # ( 
+	i2s_clock_mux_slave_lite_v1_0_S00_AXI # (
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) i2s_clock_mux_slave_lite_v1_0_S00_AXI_inst (
@@ -82,8 +82,23 @@
 	);
 
 	// Add user logic here
-	assign bclk = reg_selected_clock ? sclk_tx : sclk_rx;
-	assign lrclk = reg_selected_clock ? lrclk_tx : lrclk_rx;
+    BUFGCTRL #(
+        .INIT_OUT    (0),
+        .PRESELECT_I0("TRUE"),
+        .PRESELECT_I1("FALSE")
+    ) u_bufgctrl_bclk (
+        .I0(sclk_rx),
+        .I1(sclk_tx),
+        .S0(~reg_selected_clock),
+        .S1( reg_selected_clock),
+        .CE0(1'b1),
+        .CE1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b0),
+        .O(bclk)
+    );
+
+    assign lrclk = reg_selected_clock ? lrclk_tx : lrclk_rx;
 	assign pblrc = lrclk;
 	assign reclrc = lrclk;
 
