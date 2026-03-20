@@ -1,0 +1,37 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "ignorePaths": [
+        ".git/**",
+        "node_modules/**"
+    ],
+    "words": [
+        "Zynq",
+        "FPGA",
+        "AXI",
+        "DMA",
+        "Vivado",
+        "Vitis",
+        "HLS",
+        "LVGL",
+        "Baremetal",
+        "MM2S",
+        "S2MM",
+        "TLAST",
+        "VoiceNote",
+        "SSM2603",
+        "I2S",
+        "FatFs",
+        "Doxygen",
+        "CST328",
+        "ILI9341",
+        "ST7789",
+        "ToF",
+        "AGC",
+        "DCCut"
+    ],
+    "ignoreRegExpList": [
+        "/0x[0-9A-Fa-f]+/g",
+        "/[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*/g"
+    ]
+}

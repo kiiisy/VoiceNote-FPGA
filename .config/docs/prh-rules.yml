@@ -1,0 +1,23 @@
+version: 1
+
+rules:
+
+  - expected: FPGA
+    pattern: fpga
+    message: "FPGAは大文字で統一してください"
+
+  - expected: DMA
+    pattern: dma
+    message: "DMAは大文字で統一してください"
+
+  - expected: Zynq
+    pattern: zynq
+    message: "Zynqは大文字で統一してください"
+
+  - expected: 録音
+    pattern: レコーディング
+    message: "用語は『録音』で統一してください"
+
+  - expected: 再生
+    pattern: プレイバック
+    message: "用語は『再生』で統一してください"

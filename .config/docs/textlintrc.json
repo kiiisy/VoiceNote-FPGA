@@ -1,0 +1,20 @@
+{
+    "plugins": [
+        "textlint-rule-prh"
+    ],
+    "rules": {
+        "preset-ja-technical-writing": {
+            "sentence-length": {
+                "max": 120
+            }
+        },
+        "ja-no-abusage": true,
+        "no-mix-dearu-desumasu": true,
+        "ja-no-weak-phrase": true,
+        "prh": {
+            "rulePaths": [
+                ".config/docs/prh-rules.yml"
+            ]
+        }
+    }
+}

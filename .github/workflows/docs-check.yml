@@ -1,0 +1,100 @@
+name: Docs Check
+
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - ".config/docs/**"
+      - ".github/workflows/docs-check.yml"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  markdownlint:
+    name: markdownlint (reviewdog)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Run markdownlint with reviewdog
+        uses: reviewdog/action-markdownlint@v0.26.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          filter_mode: added
+          fail_level: warning
+          level: warning
+          markdownlint_flags: "--config .config/docs/markdownlint.json **/*.md"
+
+  textlint:
+    name: textlint (reviewdog)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install textlint and rules
+        run: |
+          npm install -g textlint
+          npm install -g textlint-rule-preset-ja-technical-writing
+          npm install -g textlint-rule-ja-no-abusage
+          npm install -g textlint-rule-no-mix-dearu-desumasu
+          npm install -g textlint-rule-prh
+
+      - name: Setup reviewdog
+        uses: reviewdog/action-setup@v1
+
+      - name: Run textlint with reviewdog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          textlint -f checkstyle --config .config/docs/textlintrc.json "**/*.md" > textlint-checkstyle.xml || true
+
+          if [ -s textlint-checkstyle.xml ]; then
+            reviewdog \
+              -f=checkstyle \
+              -name="textlint" \
+              -reporter=github-pr-review \
+              -filter-mode=added \
+              -level=warning \
+              < textlint-checkstyle.xml
+          else
+            echo "No textlint issues found."
+          fi
+
+  cspell:
+    name: cspell
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Run cspell
+        uses: streetsidesoftware/cspell-action@v8
+        with:
+          config: .config/docs/cspell.json
+          files: "**/*.md"
+          inline: warning
+          strict: false
+
+  lychee:
+    name: lychee
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: >
+            --config .config/docs/lychee.toml
+            **/*.md
