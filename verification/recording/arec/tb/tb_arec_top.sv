@@ -5,17 +5,17 @@ import axi4stream_vip_pkg::*;
 import recording_test_axi_vip_0_0_pkg::*;
 import recording_test_axi_vip_1_0_pkg::*;
 import recording_test_axi_vip_2_0_pkg::*;
-import recording_test_axi4stream_vip_0_0_pkg::*;
+import recording_test_axi4stream_vip_1_0_pkg::*;
 import csv_pkg::*;
 
-module tb_top;
+module tb_arec_top;
 
 // ------------------------------------------------------------
 // インクルード定義
 // ------------------------------------------------------------
-`include "tb_cfg.svh"
-`include "reg_acces.svh"
-`include "tb_utils.svh"
+`include "tb_arec_cfg.svh"
+`include "rec_reg_acces.svh"
+`include "tb_arec_utils.svh"
 
 // ------------------------------------------------------------
 // 内部信号
@@ -75,7 +75,7 @@ i2s_input_dpi src (
 recording_test_axi_vip_0_0_mst_t        axi_i2s_mst;
 recording_test_axi_vip_1_0_mst_t        axi_acu_mst;
 recording_test_axi_vip_2_0_mst_t        axi_arec_mst;
-recording_test_axi4stream_vip_0_0_slv_t axistream_slv;
+recording_test_axi4stream_vip_1_0_slv_t axistream_slv;
 
 // ------------------------------------------------------------
 // シナリオ

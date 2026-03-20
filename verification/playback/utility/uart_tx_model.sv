@@ -3,11 +3,11 @@
 module uart_tx_model #(
     parameter int CLK_FREQ_HZ        = 100_000_000,
     parameter int BAUD_RATE          = 115_200,
-    parameter int FRAME_INTERVAL_CLKS= 400_000,     // 4ms @100MHz
-    parameter      [15:0] DIST_MM    = 16'd1000     // 1.0m
+    parameter int FRAME_INTERVAL_CLKS= 400_000      // 4ms @100MHz
 )(
     input  wire clk,
     input  wire rst_n,
+    input  wire [15:0] dist_mm,
     output reg  rx    // DUT 側から見た UART RX
 );
 
@@ -53,8 +53,8 @@ module uart_tx_model #(
             // フレーム内容構成
             frame[0] = 8'h59;
             frame[1] = 8'h59;
-            frame[2] = DIST_MM[7:0];   // Dist_L
-            frame[3] = DIST_MM[15:8];  // Dist_H
+            frame[2] = dist_mm[7:0];   // Dist_L
+            frame[3] = dist_mm[15:8];  // Dist_H
             frame[4] = 8'h00;          // Amp_L
             frame[5] = 8'h00;          // Amp_H
             frame[6] = 8'h00;          // Temp_L

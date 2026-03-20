@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-`define TB $root.tb_top
+`define TB $root.tb_arec_top
 
 module scenario_005;
     // ------------------------------------------------------------

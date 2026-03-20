@@ -1,6 +1,0 @@
-enable,scenario_id,input_csv,output_csv,golden_csv,note
-1,1,verification/recording/arec/input/scenario_001_input.csv,verification/recording/arec/output/scenario_001_hw.csv,verification/recording/arec/output/scenario_001_golden.csv,pass-through baseline
-0,2,verification/recording/arec/input/scenario_002_input.csv,verification/recording/arec/output/scenario_002_hw.csv,verification/recording/arec/output/scenario_002_golden.csv,dump and irq
-0,3,verification/recording/arec/input/scenario_003_input.csv,verification/recording/arec/output/scenario_003_hw.csv,verification/recording/arec/output/scenario_003_golden.csv,boundary check (PRETRIG default=512)
-0,4,verification/recording/arec/input/scenario_004_input.csv,verification/recording/arec/output/scenario_004_hw.csv,verification/recording/arec/output/scenario_004_golden.csv,rearm check
-0,5,verification/recording/arec/input/scenario_005_input.csv,verification/recording/arec/output/scenario_005_hw.csv,verification/recording/arec/output/scenario_005_golden.csv,no trigger check
