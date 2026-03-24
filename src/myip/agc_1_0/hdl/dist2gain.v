@@ -22,6 +22,7 @@ module dist2gain (
     // -------------------------------
     localparam LUT_DEPTH = 88;
     localparam LUT_WIDTH = 16;
+    localparam LUT_ADDR_W = $clog2(LUT_DEPTH);
 
     // 上下限閾値（Supported for 200mm to 3000mm）
     localparam DIST_MIN_MM = 16'd200;
@@ -51,7 +52,7 @@ module dist2gain (
     reg  [15:0] r_dist_clamped_mm;
     reg  [15:0] r_offset_mm;
 
-    reg  [ 6:0] r_addr;
+    reg  [LUT_ADDR_W-1:0] r_addr;
     reg         r_rden;
     wire        w_rden;
     reg  [ 2:0] r_wait_cnt;
@@ -236,7 +237,7 @@ module dist2gain (
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             r_rden <= 1'b0;
-            r_addr <= 7'd0;
+            r_addr <= {LUT_ADDR_W{1'b0}};
         end else begin
             if (r_state == S_ADDR) begin
                 r_rden <= 1'b1;
@@ -276,7 +277,7 @@ module dist2gain (
     // LUT本体
     // -------------------------------
     xpm_memory_sprom #(
-        .ADDR_WIDTH_A(7),              // DECIMAL
+        .ADDR_WIDTH_A(LUT_ADDR_W),     // DECIMAL
         .AUTO_SLEEP_TIME(0),           // DECIMAL
         .CASCADE_HEIGHT(0),            // DECIMAL
         .ECC_BIT_RANGE("7:0"),         // String

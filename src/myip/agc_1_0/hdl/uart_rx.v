@@ -39,18 +39,26 @@ module uart_rx (
 
     // -------------------------------
     // ボーレートカウンタ
+    // 受信中のみ動作。IDLEでstartを検出したら半bit遅延で位相合わせ
     // -------------------------------
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             r_baud_cnt  <= 16'd0;
-            r_baud_tick <= 1'd0;
+            r_baud_tick <= 1'b0;
         end else begin
-            if (r_baud_cnt == (BAUD_CNT_MAX-1)) begin
+            if (r_state == S_IDLE) begin
+                if (!rx) begin
+                    r_baud_cnt <= (BAUD_CNT_MAX >> 1);
+                end else begin
+                    r_baud_cnt <= 16'd0;
+                end
+                r_baud_tick <= 1'b0;
+            end else if (r_baud_cnt == (BAUD_CNT_MAX-1)) begin
                 r_baud_cnt  <= 16'd0;
-                r_baud_tick <= 1'd1;
+                r_baud_tick <= 1'b1;
             end else begin
-                r_baud_cnt  <= r_baud_cnt + 16'd1;
-                r_baud_tick <= 1'd0;
+                r_baud_cnt <= r_baud_cnt + 16'd1;
+                r_baud_tick <= 1'b0;
             end
         end
     end
